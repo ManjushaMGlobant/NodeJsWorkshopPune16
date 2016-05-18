@@ -1,0 +1,26 @@
+{
+    "students" :
+    		[
+             {
+	             "id": 123,
+  				 "fName": "John",
+				 "lName": "Doe",
+				 "score": 234
+
+	         },
+
+	         {
+	            "id": 124,
+				"fName": "Jane",
+				"lName": "Jackson",
+				"score": 543
+	         },
+	         {
+	         	"id": 125,
+				"fName": "Jackie",
+				"lName": "Samuel",
+				"score": 453
+	         }
+
+            ]
+ }
