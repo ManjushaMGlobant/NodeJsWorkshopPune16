@@ -46,13 +46,17 @@ FileOperations.prototype.readFile = function(success, error){
 	 
 };
 
+FileOperations.prototype.sort = function(data){
+	data.students.sort(function(a, b){return b.score-a.score});
+	//console.log('In sort '+data);
+}
+
 //Method to write into text file after sorting all the data
-FileOperations.prototype.sortWriteToTextFile = function(data){
+FileOperations.prototype.writeToTextFile = function(data){
 	 // body... 
 	 var students='Id|First Name|Last Name|Score \n';
 	 
-	 data.students.sort(function(a, b){return b.score-a.score});
-
+	// data.students.sort(function(a, b){return b.score-a.score});
 	 data.students.forEach(function(student){
    		
 	 students+= student.id+'|'+student.fName +'|'+student.lName+'|'+student.score+'\n';
@@ -95,7 +99,8 @@ FileOperations.prototype.writeToXMLFile = function(data){
 var fileop = new FileOperations();
 
 fileop.readFile(function(data){	
-	fileop.sortWriteToTextFile(data);
+	fileop.sort(data);
+	fileop.writeToTextFile(data);
 	fileop.writeToXMLFile(data);
 },
 
