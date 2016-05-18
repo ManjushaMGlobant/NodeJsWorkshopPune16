@@ -1,0 +1,4 @@
+Id|First Name|Last Name|Score 
+124|Jane|Jackson|543
+125|Jackie|Samuel|453
+123|John|Doe|234
